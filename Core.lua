@@ -22,7 +22,6 @@ function PatchTracker:OnGroupChanged()
     local party = GetHomePartyInfo()
     inGroup = party ~= nil
     if not inGroup then
-        inGroup = false
         patchToon = ""
         TomTom:ReleaseCrazyArrow()
         return
@@ -48,7 +47,7 @@ end
 function PatchTracker:COMBAT_LOG_EVENT_UNFILTERED()
     local timestamp, subevent, _, sourceGUID, sourceName, _, _, destGUID, destName, _, _, spellID = CombatLogGetCurrentEventInfo()
     if (subevent == "UNIT_DIED" and self:playerIsPatch(destName)) then
-        PlaySoundFile("Interface\\Addons\\wow_addon\\dead.mp3", "SFX")
+        PlaySoundFile("Interface\\Addons\\PartnerTracker\\dead.mp3", "SFX")
         self:Print("Patch died!")
         TomTom:SetCrazyArrowTitle("he dead :(")
     end

@@ -1,0 +1,15 @@
+## Interface: 40000
+## Title: PatchTracker
+## Notes: Tracks your boyfriend
+## Author: Patches
+## Version: 0.1
+
+embeds.xml
+Core.lua
+
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler\CallbackHandler-1.0.xml
+Libs\HereBeDragons\HereBeDragons-2.0.lua
+#@end-no-lib-strip@
+
